@@ -12,8 +12,9 @@
     "prewatch": "node main clean dist",
     "watch": "node main watch",
     "start": "node main",
-    "startd": "pm2 start main",
+    "startd": "pm2 start main.js",
     "stopd": "pm2 stop main",
+    "poststopd": "pm2 delete main",
     "clean": "node main clean .parcel-cache dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
