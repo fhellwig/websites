@@ -11,6 +11,9 @@ const distDir = resolvePath('dist');
 const entries = resolvePath('webapp/index.html');
 
 async function run() {
+  if (!existsSync(resolvePath('package.json'))) {
+    throw new Error('Invalid current working directory');
+  }
   try {
     switch (cmd) {
       case 'build':
@@ -57,17 +60,8 @@ async function clean(dir) {
   });
 }
 
-function getCwd() {
-  const argv1 = process.argv[1];
-  if (typeof argv1 === 'string') {
-    return dirname(argv1);
-  } else {
-    return process.cwd();
-  }
-}
-
 export function resolvePath(name) {
-  return resolve(getCwd(), name);
+  return resolve(process.cwd(), name);
 }
 
 run();

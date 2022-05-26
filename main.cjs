@@ -1,4 +1,4 @@
+// CommonJS entry point if needed
 import('./main.js').then(({ main }) => {
-  //main();
-  console.log('imported main');
+    // imported main
 });
