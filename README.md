@@ -1,6 +1,6 @@
 # Introduction 
 
-My website.
+Application to serve one or more webapps.
 
 # Getting Started
 
