@@ -1,0 +1,39 @@
+{
+  "name": "hellwig.org",
+  "version": "1.0.0",
+  "description": "The hellwig.org website",
+  "type": "module",
+  "alias": {
+    "process": false
+  },
+  "scripts": {
+    "prebuild": "node main clean dist",
+    "build": "node main build",
+    "prewatch": "node main clean dist",
+    "watch": "node main watch",
+    "start": "node main",
+    "clean": "node main clean .parcel-cache dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://fhellwig@dev.azure.com/fhellwig/hellwig.org/_git/hellwig.org"
+  },
+  "keywords": [
+    "website"
+  ],
+  "author": "Frank Hellwig",
+  "license": "MIT",
+  "dependencies": {
+    "@parcel/config-default": "^2.6.0",
+    "@parcel/core": "^2.6.0",
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "shutdown-async": "^1.1.0",
+    "styled-components": "^5.3.5",
+    "supports-color": "^9.2.2"
+  }
+}
