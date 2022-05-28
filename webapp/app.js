@@ -24,7 +24,7 @@ const theme = {
 };
 
 export function App() {
-  [host, setHost] = useState(null);
+  const [host, setHost] = useState(null);
 
   useEffect(() => {
     async function getHost() {
