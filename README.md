@@ -1,4 +1,4 @@
-# Introduction 
+# Introduction
 
 Application to serve one or more webapps.
 
@@ -19,5 +19,4 @@ Application to serve one or more webapps.
 
 You can use a `.env` file to set these.
 
-- `DEBUG`: using the debug package
 - `PORT`: the server port number

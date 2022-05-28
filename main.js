@@ -1,11 +1,16 @@
 import 'dotenv/config';
-import debug from 'debug';
-import { rm, existsSync } from 'fs';
-import { dirname, resolve } from 'path';
+import { existsSync, rm } from 'fs';
+import { resolve } from 'path';
+import { createLog } from 'pkglogger';
 import { exitGracefully } from 'shutdown-async';
-import { createApp, startServer, buildProject, watchProject } from './src/index.js';
+import {
+  buildProject,
+  createApp,
+  startServer,
+  watchProject
+} from './src/index.js';
 
-const log = debug('main.js');
+const log = createLog(import.meta);
 const cmd = process.argv[2];
 const distDir = resolvePath('dist');
 const entries = resolvePath('webapp/index.html');
@@ -27,7 +32,7 @@ async function run() {
         for (let i = 3; i < process.argv.length; i++) {
           let dir = process.argv[i];
           if (await clean(resolvePath(dir))) {
-            log(`removed ${dir}`);
+            log.info(`removed ${dir}`);
           }
         }
         break;

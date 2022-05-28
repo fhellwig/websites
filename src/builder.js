@@ -1,10 +1,10 @@
-import debug from 'debug';
-import { addExitHandler } from 'shutdown-async';
 import { Parcel } from '@parcel/core';
+import { createLog } from 'pkglogger';
+import { addExitHandler } from 'shutdown-async';
 
 export { buildProject, watchProject };
 
-const log = debug('builder.js');
+const log = createLog(import.meta);
 
 async function buildProject(entries) {
   const bundler = new Parcel({
@@ -12,10 +12,10 @@ async function buildProject(entries) {
     defaultConfig: '@parcel/config-default',
     mode: 'production'
   });
-  log('building...');
+  log.info('building...');
   try {
     await bundler.run();
-    log('finished building');
+    log.info('finished building');
   } catch (err) {
     handleError(err);
   }
@@ -30,12 +30,12 @@ async function watchProject(entries) {
   try {
     const subscription = await bundler.watch((_, event) => {
       if (event.type === 'buildSuccess') {
-        log('rebuilt project');
+        log.info('rebuilt project');
       } else if (event.type === 'buildFailure') {
         handleError(event);
       }
     });
-    log('watching...');
+    log.info('watching...');
     addExitHandler(subscription.unsubscribe);
   } catch (err) {
     handleError(err);
@@ -44,16 +44,20 @@ async function watchProject(entries) {
 
 function handleError(err) {
   err.diagnostics.forEach((obj) => {
-    log(`ERROR: ${obj.message}`);
+    log.error(obj.message);
     if (obj.codeFrames) {
       obj.codeFrames.forEach((frame) => {
-        log(` file: ${frame.filePath}`);
+        log.error(` file: ${frame.filePath}`);
         if (Array.isArray(frame.codeHighlights)) {
           frame.codeHighlights.forEach((code) => {
-            log(`start: line ${code.start.line}, column ${code.start.column}`);
-            log(`  end: line ${code.end.line}, column ${code.end.column}`);
+            log.error(
+              `start: line ${code.start.line}, column ${code.start.column}`
+            );
+            log.error(
+              `  end: line ${code.end.line}, column ${code.end.column}`
+            );
             if (code.message) {
-              log(code.message);
+              log.error(code.message);
             }
           });
         }
