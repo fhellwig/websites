@@ -33,7 +33,7 @@ export function App() {
       setHost(host);
     }
     getHost();
-  });
+  }, []);
 
   return (
     <Grommet theme={theme} themeMode="dark" full>
