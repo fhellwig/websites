@@ -10,7 +10,9 @@ async function buildProject(entries) {
   const bundler = new Parcel({
     entries: entries,
     defaultConfig: '@parcel/config-default',
-    mode: 'production'
+    xxmode: 'production',
+autoInstall:true,
+autoinstall:true
   });
   log.info('building...');
   try {
