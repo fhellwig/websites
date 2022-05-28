@@ -8,7 +8,7 @@ import {
   ResponsiveContext
 } from 'grommet';
 import { FormClose, Notification } from 'grommet-icons';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const theme = {
   global: {
@@ -24,16 +24,27 @@ const theme = {
 };
 
 export function App() {
+  [host, setHost] = useState(null);
+
+  useEffect(() => {
+    async function getHost() {
+      const res = await fetch('/host');
+      const host = await res.json();
+      setHost(host);
+    }
+    getHost();
+  });
+
   return (
     <Grommet theme={theme} themeMode="dark" full>
       <ResponsiveContext.Consumer>
-        {(size) => <Content size={size} />}
+        {(size) => <Content size={size} {...host} />}
       </ResponsiveContext.Consumer>
     </Grommet>
   );
 }
 
-function Content({ size }) {
+function Content({ size, hostname, domain }) {
   const [showSidebar, setShowSidebar] = useState(false);
   return (
     <Box fill>
@@ -51,7 +62,7 @@ function Content({ size }) {
       </AppBar>
       <Box direction="row" flex overflow={{ horizontal: 'hidden' }}>
         <Box flex align="center" justify="center">
-          app body
+          <h1>You are calling this app as {domain}</h1>
         </Box>
         {!showSidebar || size !== 'small' ? (
           <Collapsible direction="horizontal" open={showSidebar}>
