@@ -1,18 +1,32 @@
-import { Header, Heading } from 'grommet';
+import { Header, Text } from 'grommet';
+import React from 'react';
+
+function HeaderText({ children, ...rest }) {
+  return (
+    <Text
+      size="xxlarge"
+      weight={500}
+      margin={{ left: 'medium', right: 'medium' }}
+      style={{ whiteSpace: 'nowrap' }}
+      {...rest}
+    >
+      {children}
+    </Text>
+  );
+}
 
 export function PageHeader() {
   return (
     <Header
-      fill="horizontal"
-      direction="column"
       background="brand"
-      height="xsmall"
       justify="center"
-      align="center"
+      wrap
+      pad={{
+        vertical: 'small'
+      }}
     >
-      <Heading level="1" size="small">
-        Frank Hellwig &mdash; Solution Architect
-      </Heading>
+      <HeaderText a11yTitle="Name">Frank Hellwig</HeaderText>
+      <HeaderText a11yTitle="Role">Solution Architect</HeaderText>
     </Header>
   );
 }

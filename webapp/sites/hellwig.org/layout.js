@@ -1,18 +1,5 @@
 import styled from 'styled-components';
 
-export const Page = styled.div`
-  hight: 100%;
-`;
-
-export const PageHeader = styled.div`
-  background-color: DodgerBlue;
-  font-size: 2em;
-  color: white;
-  line-height: 2em;
-  text-align: center;
-  font-weight: 500;
-`;
-
 export const PageContent = styled.div`
   margin-top: 1em;
   display: flex;
@@ -24,6 +11,7 @@ export const PageContent = styled.div`
 `;
 
 export const PageItem = styled.div`
+display: "inline-block"
   xpadding: 1em;
   xmargin: 1em;
 `;
@@ -39,6 +27,7 @@ export const Card = styled.div`
   border-radius: 10px;
   padding: 1em;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 1em;
 `;
 
 export const CardHeader = styled.div`
