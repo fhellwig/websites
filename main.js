@@ -13,6 +13,7 @@ import {
 const log = createLog(import.meta);
 const cmd = process.argv[2];
 const distDir = resolvePath('dist');
+const staticDir = resolvePath('static');
 const entries = resolvePath('webapp/index.html');
 
 async function run() {
@@ -25,7 +26,7 @@ async function run() {
         await buildProject(entries);
         break;
       case 'watch':
-        await startServer(createApp(distDir), process.env.PORT);
+        await startServer(createApp(distDir, staticDir), process.env.PORT);
         await watchProject(entries);
         break;
       case 'clean':

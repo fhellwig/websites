@@ -34,6 +34,7 @@ export const PageBreak = styled.div`
 `;
 
 export const Card = styled.div`
+  background-color: white;
   border: solid 1px #909090;
   border-radius: 10px;
   padding: 1em;
@@ -44,7 +45,7 @@ export const CardHeader = styled.div`
   border-bottom: solid 1px;
   font-weight: 500;
   font-size: 1.1em;
-  padding-bottom: 5px;
+  margin-bottom: 5px;
   text-align: center;
 `;
 
