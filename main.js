@@ -42,7 +42,7 @@ async function run() {
           // in case they forgot to run npm run build
           await buildProject(entries);
         }
-        await startServer(createApp(distDir), process.env.PORT);
+        await startServer(createApp(distDir, staticDir), process.env.PORT);
         break;
     }
   } catch (_) {
