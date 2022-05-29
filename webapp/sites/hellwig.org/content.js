@@ -60,6 +60,26 @@ export function Content() {
             </CardBody>
           </Card>
           <Card>
+            <CardHeader>Recent Highlights</CardHeader>
+            <CardBody>
+              <p style={{ maxWidth: '20em' }}>
+                Over the past year, I have been the principal SA on bids
+                totalling $1.6B TCV of single-award, prime contracts with U.S.
+                Federal Departments and Agencies.
+              </p>
+            </CardBody>
+          </Card>
+          <Card style={{ maxWidth: '40em' }}>
+            <CardHeader>Resume</CardHeader>
+            <CardBody>
+              <p>
+                <a href="https://drive.google.com/file/d/1XPq5G1JxwfKMX-khcnqecxAwraSyWc1u/view?usp=sharing">
+                  Resume Download Link (PDF)
+                </a>
+              </p>
+            </CardBody>
+          </Card>
+          <Card>
             <CardHeader>Education</CardHeader>
             <CardBody>
               <Table>
@@ -80,16 +100,6 @@ export function Content() {
                   </tr>
                 </tbody>
               </Table>
-            </CardBody>
-          </Card>
-          <Card>
-            <CardHeader>Recent Highlights</CardHeader>
-            <CardBody>
-              <p style={{ maxWidth: '20em' }}>
-                Over the past year, I have been the principal SA on bids
-                totalling $1.6B TCV of single-award, prime contracts with U.S.
-                Federal Departments and Agencies.
-              </p>
             </CardBody>
           </Card>
           <Card>
@@ -167,17 +177,6 @@ export function Content() {
                 I own a Cirrus SR20 that I keep at KHEF. In my spare time, I
                 enjoy flying with my wonderful wife, riding my motorcycle, and
                 building various AR-platform rifles.
-              </p>
-            </CardBody>
-          </Card>
-
-          <Card style={{ maxWidth: '40em' }}>
-            <CardHeader>Resume</CardHeader>
-            <CardBody>
-              <p>
-                <a href="https://drive.google.com/file/d/1XPq5G1JxwfKMX-khcnqecxAwraSyWc1u/view?usp=sharing">
-                  Resume Download Link (PDF)
-                </a>
               </p>
             </CardBody>
           </Card>

@@ -10,12 +10,6 @@ export const PageContent = styled.div`
   padding: 2px;
 `;
 
-export const PageItem = styled.div`
-display: "inline-block"
-  xpadding: 1em;
-  xmargin: 1em;
-`;
-
 export const PageBreak = styled.div`
   flex-basis: 100%;
   height: 0;
