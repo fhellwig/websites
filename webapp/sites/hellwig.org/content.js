@@ -33,9 +33,10 @@ export function Content() {
       <PageHeader />
       {true && (
         <Box
-          direction="row"
+          fill
           wrap
-          overflow={{ horizontal: 'hidden' }}
+          direction="row"
+          overflow={{ vertical: 'scroll', horizontal: 'hidden' }}
           justify="center"
         >
           <Card>
