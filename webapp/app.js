@@ -1,14 +1,10 @@
-import {
-  Box,
-  Button,
-  Collapsible,
-  Grommet,
-  Heading,
-  Layer,
-  ResponsiveContext
-} from 'grommet';
-import { FormClose, Notification } from 'grommet-icons';
 import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
+import { getContent } from './sites/content.js';
+
+const Site = styled.div`
+  font-family: Roboto, sans-serif;
+`;
 
 const theme = {
   global: {
@@ -18,13 +14,13 @@ const theme = {
     font: {
       family: 'Roboto, sans-serif',
       size: '18px',
-      height: '20px'
+      heigt: '20px'
     }
   }
 };
 
 export function App() {
-  const [host, setHost] = useState(null);
+  const [host, setHost] = useState({});
 
   useEffect(() => {
     async function getHost() {
@@ -35,82 +31,17 @@ export function App() {
     getHost();
   }, []);
 
-  return (
-    <Grommet theme={theme} themeMode="dark" full>
-      <ResponsiveContext.Consumer>
-        {(size) => <Content size={size} {...host} />}
-      </ResponsiveContext.Consumer>
-    </Grommet>
-  );
+  return <Site>{getContent(host.domain)}</Site>;
 }
 
-function Content({ size, hostname, domain }) {
-  const [showSidebar, setShowSidebar] = useState(false);
-  return (
-    <Box fill>
-      <AppBar>
-        <Heading level="3" margin="none">
-          My App
-          <p>size: {size}</p>
-        </Heading>
-        <Button
-          icon={<Notification />}
-          onClick={() => {
-            setShowSidebar(!showSidebar);
-          }}
-        />
-      </AppBar>
-      <Box direction="row" flex overflow={{ horizontal: 'hidden' }}>
-        <Box flex align="center" justify="center">
-          <h1>You are calling this app as {domain}</h1>
-        </Box>
-        {!showSidebar || size !== 'small' ? (
-          <Collapsible direction="horizontal" open={showSidebar}>
-            <Box
-              flex
-              width="medium"
-              background="light-2"
-              elevation="small"
-              align="center"
-              justify="center"
-            >
-              sidebar
-            </Box>
-          </Collapsible>
-        ) : (
-          <Layer>
-            <Box
-              background="light-2"
-              tag="header"
-              justify="end"
-              align="center"
-              direction="row"
-            >
-              <Button
-                icon={<FormClose />}
-                onClick={() => setShowSidebar(false)}
-              ></Button>
-            </Box>
-            <Box fill background="light-2" align="center" justify="center">
-              sidebar
-            </Box>
-          </Layer>
-        )}
-      </Box>
-    </Box>
-  );
+function Content({ size, domain }) {
+  switch (domain) {
+    case 'hellwig.org':
+    case 'localhost':
+      return <Hellwig />;
+    case 'odalco.com':
+      return <Odalco />;
+    default:
+      return <h1>Unknown domain: {domain}</h1>;
+  }
 }
-
-const AppBar = (props) => (
-  <Box
-    tag="header"
-    direction="row"
-    align="center"
-    justify="between"
-    background="brand"
-    pad={{ left: 'medium', right: 'small', vertical: 'small' }}
-    elevation="medium"
-    style={{ zIndex: '1' }}
-    {...props}
-  />
-);
