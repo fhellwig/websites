@@ -1,20 +1,5 @@
 import styled from 'styled-components';
 
-export const PageContent = styled.div`
-  margin-top: 1em;
-  display: flex;
-  justify-content: center;
-  flex-flow: row wrap;
-  row-gap: 1em;
-  column-gap: 1em;
-  padding: 2px;
-`;
-
-export const PageBreak = styled.div`
-  flex-basis: 100%;
-  height: 0;
-`;
-
 export const Card = styled.div`
   background-color: white;
   border: solid 1px #909090;

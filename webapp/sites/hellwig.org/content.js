@@ -1,6 +1,6 @@
 import { Box } from 'grommet';
 import styled from 'styled-components';
-import { Card, CardBody, CardHeader } from './layout.js';
+import { Card, CardBody, CardHeader } from './card.js';
 import { PageHeader } from './page-header.js';
 
 const Table = styled.table`
@@ -33,7 +33,7 @@ export function Content() {
       <PageHeader />
       {true && (
         <Box
-          fill
+          xxfill
           wrap
           direction="row"
           overflow={{ vertical: 'scroll', horizontal: 'hidden' }}
