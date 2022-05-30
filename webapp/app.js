@@ -1,5 +1,4 @@
-import { Grommet } from 'grommet';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getContent } from './sites/content.js';
 
 const theme = {
@@ -27,9 +26,5 @@ export function App() {
     getHost();
   }, []);
 
-  return (
-    <Grommet theme={theme} full>
-      {getContent(host.domain)}
-    </Grommet>
-  );
+  return getContent(host.domain);
 }
