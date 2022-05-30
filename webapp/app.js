@@ -4,7 +4,8 @@ import { getContent } from './sites/content.js';
 const theme = {
   global: {
     colors: {
-      brand: '#228Be6'
+      brand: '#228Be6',
+      text: 'black'
     },
     font: {
       family: 'Roboto, sans-serif',

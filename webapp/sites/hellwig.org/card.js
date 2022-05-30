@@ -7,6 +7,7 @@ export const Card = styled.div`
   padding: 1em;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   flex: 1 400px;
+  z-index: 10;
 `;
 
 export const CardHeader = styled.div`
