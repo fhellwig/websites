@@ -12,7 +12,7 @@ const Table = styled.table`
   }
   thead {
     th {
-      text-align: center;
+      text-align: left;
     }
   }
   tbody {
@@ -61,14 +61,14 @@ export function Content() {
         <Card>
           <CardHeader>Recent Highlights</CardHeader>
           <CardBody>
-            <p style={{ maxWidth: '20em' }}>
+            <p>
               Over the past year, I have been the principal SA on bids totalling
               $1.6B TCV of single-award, prime contracts with U.S. Federal
               Departments and Agencies.
             </p>
           </CardBody>
         </Card>
-        <Card style={{ maxWidth: '40em' }}>
+        <Card>
           <CardHeader>Resume</CardHeader>
           <CardBody>
             <p>
@@ -104,7 +104,7 @@ export function Content() {
         <Card>
           <CardHeader>Career Summary</CardHeader>
           <CardBody>
-            <div style={{ maxWidth: '35em' }}>
+            <div>
               <ul>
                 <li>
                   U.S. Army Captain supporting the Strategic Defense Initiative
@@ -165,7 +165,7 @@ export function Content() {
             </ul>
           </CardBody>
         </Card>
-        <Card style={{ maxWidth: '40em' }}>
+        <Card>
           <CardHeader>Personal Information</CardHeader>
           <CardBody>
             <p>
