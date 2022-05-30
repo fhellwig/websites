@@ -1,4 +1,4 @@
-import { Header, Text } from 'grommet';
+import { Footer, Text } from 'grommet';
 import React from 'react';
 
 function HeaderText({ children, ...rest }) {
@@ -15,19 +15,20 @@ function HeaderText({ children, ...rest }) {
   );
 }
 
-export function PageHeader() {
+export function PageFooter() {
   return (
-    <Header
+    <Footer
       flex={false}
       background="brand"
       justify="center"
-      wrap
       pad={{
         vertical: 'small'
       }}
     >
-      <HeaderText a11yTitle="Name">Frank Hellwig</HeaderText>
-      <HeaderText a11yTitle="Role">Solution Architect</HeaderText>
-    </Header>
+      <Text a11yTitle="Contact">
+        Please contact me via <a href="tel:5712076308">phone</a> or{' '}
+        <a href="mailto:frank@hellwig.org">email</a>.
+      </Text>
+    </Footer>
   );
 }
