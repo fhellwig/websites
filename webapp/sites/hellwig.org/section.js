@@ -73,7 +73,7 @@ export function Section() {
         <CardHeader>Recent Highlights</CardHeader>
         <CardBody>
           <p>
-            Over the past year, I have been the principal SA on bids totalling
+            Over the past year, I have been the principal SA on bids totaling
             $1.6B TCV of single-award, prime contracts with U.S. Federal
             Departments and Agencies.
           </p>
