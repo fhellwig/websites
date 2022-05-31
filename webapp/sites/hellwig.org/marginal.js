@@ -6,8 +6,8 @@ export const Marginal = styled.div`
   flex-flow: row wrap;
   flex: 0 0 70px;
   height: 70px;
-  color: white;
-  background-color: #228be6;
+  color: ${(p) => p.theme.marginal.fgcolor};
+  background-color: ${(p) => p.theme.marginal.bgcolor};
   justify-content: center;
   align-items: center;
   h1 {

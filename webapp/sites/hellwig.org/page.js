@@ -1,7 +1,10 @@
-import styled from 'styled-components';
+import { useState } from 'react';
+import styled, { ThemeProvider } from 'styled-components';
 import { Footer } from './footer.js';
 import { Header } from './header.js';
 import { Section } from './section.js';
+import { ThemeToggle } from './theme-toggle.js';
+import { getTheme } from './themes.js';
 
 const Wrapper = styled.div`
   display: flex;
@@ -12,6 +15,9 @@ const Wrapper = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  a {
+    color: ${(p) => p.theme.hrefcolor};
+  }
 `;
 
 const Main = styled.main`
@@ -20,13 +26,20 @@ const Main = styled.main`
 `;
 
 export function Page() {
+  const [theme, setTheme] = useState(getTheme());
+  function changeTheme(theme) {
+    setTheme(getTheme(theme));
+  }
   return (
-    <Wrapper>
-      <Header />
-      <Main>
-        <Section />
-      </Main>
-      <Footer />
-    </Wrapper>
+    <ThemeProvider theme={theme}>
+      <Wrapper>
+        <Header />
+        <Main>
+          <ThemeToggle onThemeChange={changeTheme} />
+          <Section />
+        </Main>
+        <Footer />
+      </Wrapper>
+    </ThemeProvider>
   );
 }
