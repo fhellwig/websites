@@ -15,6 +15,9 @@
     "clean": "node main clean .parcel-cache dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "staticFiles": {
+    "staticPath": "webapp/sites/hellwig.org/static"
+  },
   "repository": {
     "type": "git",
     "url": "https://fhellwig@dev.azure.com/fhellwig/hellwig.org/_git/hellwig.org"
@@ -32,6 +35,7 @@
     "express": "^4.18.1",
     "grommet": "^2.23.0",
     "grommet-icons": "^4.7.0",
+    "parcel-reporter-static-files-copy": "^1.3.4",
     "pkglogger": "^4.2.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",

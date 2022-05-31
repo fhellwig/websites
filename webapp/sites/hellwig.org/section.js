@@ -25,17 +25,29 @@ const Table = styled.table`
   }
 `;
 
-const StyledMain = styled.div`
+const StyledSection = styled.section`
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   gap: 20px;
   padding: 20px;
+  ul {
+    margin: 0;
+    margin-block: 0;
+    padding-left: 16px;
+    li {
+      padding-left: 8px;
+    }
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
 `;
 
-export function Main() {
+export function Section() {
   return (
-    <StyledMain>
+    <StyledSection>
       <Card>
         <CardHeader>Current Employment</CardHeader>
         <CardBody>
@@ -70,10 +82,8 @@ export function Main() {
       <Card>
         <CardHeader>Resume</CardHeader>
         <CardBody>
-          <p>
-            <a href="https://drive.google.com/file/d/1XPq5G1JxwfKMX-khcnqecxAwraSyWc1u/view?usp=sharing">
-              Resume Download Link (PDF)
-            </a>
+          <p style={{ textAlign: 'center' }}>
+            <a href="./resume-frank-hellwig.pdf">Resume Download Link (PDF)</a>
           </p>
         </CardBody>
       </Card>
@@ -132,29 +142,29 @@ export function Main() {
         <CardBody>
           <ul>
             <li>
-              <a href="https://drive.google.com/file/d/1mL8gpxbt-eY8Y7kabwLift4XDWHY6KeE/view?usp=sharing">
+              <a href="./cloud-migrations-lessons-learned.pdf">
                 Cloud Migrations - Lessons Learned (ACT-IAC White Paper 2018)
               </a>
             </li>
             <li>
-              <a href="https://drive.google.com/file/d/1QQV-4GdA8Gh3bSUjzUovxP_y6s4KRUq-/view?usp=sharing">
+              <a href="./security-considerations-for-dod-cloud-migrations.pdf">
                 Security Considerations for DoD Cloud Migrations (Buchanan &
                 Edwards White Paper 2017)
               </a>
             </li>
             <li>
-              <a href="https://drive.google.com/file/d/1SQ7-uJyprk_gv35gEolydty_HfUrtCYt/view?usp=sharing">
+              <a href="./5-reasons-to-move-your-line-of-business-applications-to-the-cloud.pdf">
                 5 Reasons to Move Your Line-of-Business Applications to The
                 Cloud (LinkedIn Article 2016)
               </a>
             </li>
             <li>
-              <a href="https://drive.google.com/file/d/1uY2Vq2CBaIREacV-mglbO9Mpt-xek8qM/view?usp=sharing">
+              <a href="./implementing-associations.pdf">
                 Implementing Associations (Dr. Dobb's Journal Article 1998)
               </a>
             </li>
             <li>
-              <a href="https://drive.google.com/file/d/1vPommXKyYReyLDbKFJYuitbw6VnPBEJZ/view?usp=sharing">
+              <a href="./a-secure-sds-software-library.pdf">
                 A Secure SDS Software Library (Eleventh National Computer
                 Security Conference Paper 1988)
               </a>
@@ -173,6 +183,6 @@ export function Main() {
           </p>
         </CardBody>
       </Card>
-    </StyledMain>
+    </StyledSection>
   );
 }

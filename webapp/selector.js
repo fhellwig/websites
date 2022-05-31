@@ -1,7 +1,7 @@
-import { Content as Hellwig } from './hellwig.org/content.js';
-import { Content as Odalco } from './odalco.com/content.js';
+import { Page as Hellwig } from './sites/hellwig.org/page.js';
+import { Page as Odalco } from './sites/odalco.com/page.js';
 
-export function getContent(domain) {
+export function getPageFor(domain) {
   switch (domain) {
     case 'hellwig.org':
     case 'localhost':
