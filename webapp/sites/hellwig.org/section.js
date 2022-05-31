@@ -116,21 +116,21 @@ export function Section() {
           <div>
             <ul>
               <li>
-                U.S. Army Captain supporting the Strategic Defense Initiative
-              </li>
-              <li>
-                Supported the U.S. Intelligence Communities for almost 20 years
-              </li>
-              <li>
-                Architect for the U-2R reconnaissance mission planning system
+                Over ten years experience of deep technical proposal experience
+                with measurable wins of large (&gt; $500M) contracts.
               </li>
               <li>
                 Started and grew a technical consulting company supporting CBP,
                 IRS, and Northrop Grumman
               </li>
               <li>
-                Over ten years experience of deep technical proposal experience
-                with measurable wins of large (&gt; $500M) contracts.
+                Architect for the U-2R reconnaissance mission planning system
+              </li>
+              <li>
+                Supported the U.S. Intelligence Communities for almost 20 years
+              </li>
+              <li>
+                U.S. Army Captain supporting the Strategic Defense Initiative
               </li>
             </ul>
           </div>
