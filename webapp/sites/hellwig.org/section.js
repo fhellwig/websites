@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Card, CardBody, CardHeader } from './card.js';
+import { InconvenientTruths } from './inconvenient-truths.js';
 
 const Table = styled.table`
   caption {
@@ -183,6 +184,7 @@ export function Section() {
           </p>
         </CardBody>
       </Card>
+      {false && <InconvenientTruths />}
     </StyledSection>
   );
 }
