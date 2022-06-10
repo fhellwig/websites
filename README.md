@@ -4,6 +4,18 @@ Application to serve one or more webapps.
 
 # Getting Started
 
+## Prerequisites
+
+### Install optional build tools
+
+**Linux:**
+
+    sudo apt-get install -y build-essential
+
+### Create dotenv file
+
+    cp .env.sample .env
+
 ## Development
 
     npm install

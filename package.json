@@ -16,7 +16,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "staticFiles": {
-    "staticPath": "webapp/sites/hellwig.org/static"
+    "staticPath": "webapp/sites/hellwig.org/static",
+    "staticOutPath": "static"
   },
   "repository": {
     "type": "git",
@@ -33,8 +34,6 @@
     "@parcel/css": "^1.9.0",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "grommet": "^2.23.0",
-    "grommet-icons": "^4.7.0",
     "parcel-reporter-static-files-copy": "^1.3.4",
     "pkglogger": "^4.2.1",
     "react": "^18.1.0",

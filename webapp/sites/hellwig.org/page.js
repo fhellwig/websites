@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   flex-flow: column nowrap;
   height: 100%;
   font-family: Roboto, sans-serif;
-  background-image: url(background.jpg);
+  background-image: url('static/background.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -24,6 +24,18 @@ const Main = styled.main`
   height: 100%;
   overflow-y: auto;
 `;
+
+const BuildInfo = styled.div`
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  font-size: 0.5em;
+  color: white;
+`;
+
+function Build() {
+  return <BuildInfo>220610</BuildInfo>;
+}
 
 export function Page() {
   const [theme, setTheme] = useState(getTheme());
@@ -39,6 +51,7 @@ export function Page() {
           <Section />
         </Main>
         <Footer />
+        <Build />
       </Wrapper>
     </ThemeProvider>
   );

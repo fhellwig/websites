@@ -60,7 +60,7 @@ export function Section() {
               </tr>
               <tr>
                 <th>Title</th>
-                <td>Vice President</td>
+                <td>Vice President, Solution Architecture</td>
               </tr>
               <tr>
                 <th>Location</th>
