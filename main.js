@@ -8,7 +8,7 @@ import {
   createApp,
   startServer,
   watchProject
-} from './src/index.js';
+} from './server/index.js';
 
 const log = createLog(import.meta);
 const cmd = process.argv[2];
