@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components';
 import { Footer } from './footer.js';
 import { Header } from './header.js';
+import { Markdown } from './markdown.js';
 import { Section } from './section.js';
 import { ThemeToggle } from './theme-toggle.js';
 import { getTheme } from './themes.js';
@@ -48,7 +50,17 @@ export function Page() {
         <Header />
         <Main>
           <ThemeToggle onThemeChange={changeTheme} />
-          <Section />
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Section />} />
+              <Route
+                path="/pubs"
+                element={
+                  <Markdown url="https://raw.githubusercontent.com/fhellwig/publications/master/implementing-associations/article.md" />
+                }
+              />
+            </Routes>
+          </BrowserRouter>
         </Main>
         <Footer />
         <Build />

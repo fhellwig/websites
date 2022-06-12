@@ -9,7 +9,7 @@ const darkTheme = {
 };
 
 const lightTheme = {
-  bgcolor: '#cccccc',
+  bgcolor: '#f5f5f5',
   fgcolor: 'black',
   hrefcolor: 'blue',
   marginal: {
