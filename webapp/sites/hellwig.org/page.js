@@ -35,6 +35,11 @@ const BuildInfo = styled.div`
   color: white;
 `;
 
+const Loc = styled.pre`
+  color: lightgreen;
+  background-color: black;
+`;
+
 function Build() {
   return <BuildInfo>220612.01</BuildInfo>;
 }
@@ -53,6 +58,10 @@ export function Page() {
           <BrowserRouter>
             <Routes>
               <Route path="/" element={<Section />} />
+              <Route
+                path="/loc"
+                element={<Loc>{JSON.stringify(window.location, null, 4)}</Loc>}
+              />
               <Route
                 path="/pubs"
                 element={

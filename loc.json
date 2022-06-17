@@ -1,0 +1,12 @@
+{
+  "ancestorOrigins": {},
+  "href": "http://localhost:8080/loc",
+  "origin": "http://localhost:8080",
+  "protocol": "http:",
+  "host": "localhost:8080",
+  "hostname": "localhost",
+  "port": "8080",
+  "pathname": "/loc",
+  "search": "",
+  "hash": ""
+}
