@@ -1,4 +1,5 @@
 import { Page as Hellwig } from './sites/hellwig.org/page.js';
+import { Page as Odalco } from './sites/odalco.com/page.js';
 
 export function getPageFor(domain) {
   switch (domain) {
