@@ -6,9 +6,21 @@ export function getPageFor(domain) {
     case 'localhost':
       return <Hellwig />;
     case 'odalco.com':
-      //return <Odalco />;
-      //XXX TEST ONLY
+      return <Odalco />;
+    default:
+      return <h1>Unknown domain: {domain}</h1>;
+  }
+}
+
+export function getPage() {
+  switch (window.location.hostname) {
+    case 'www.hellwig.org':
+    case 'hellwig.org':
+    case 'localhost':
       return <Hellwig />;
+    case 'www.odalco.com':
+    case 'odalco.com':
+      return <Odalco />;
     default:
       return <h1>Unknown domain: {domain}</h1>;
   }

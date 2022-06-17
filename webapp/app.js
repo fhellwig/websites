@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getPageFor } from './selector.js';
+import { getPage } from './selector.js';
 
 export function App() {
   const [host, setHost] = useState({});
@@ -13,5 +13,5 @@ export function App() {
     getHost();
   }, []);
 
-  return getPageFor(host.domain);
+  return getPage();
 }
