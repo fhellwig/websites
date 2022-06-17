@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
 import { getPage } from './selector.js';
 
 export function App() {
+  /*
   const [host, setHost] = useState({});
 
   useEffect(() => {
@@ -12,6 +12,7 @@ export function App() {
     }
     getHost();
   }, []);
+  */
 
   return getPage();
 }
