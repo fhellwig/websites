@@ -3,20 +3,18 @@
   "version": "1.0.0",
   "description": "Serve one or more websites",
   "type": "module",
-  "alias": {
-    "process": false
+  "xalias": {
+    "xprocess": false
   },
   "scripts": {
-    "prebuild": "node main clean dist",
-    "build": "node main build",
-    "prewatch": "node main clean dist",
-    "watch": "node main watch",
-    "start": "node main",
-    "clean": "node main clean .parcel-cache dist",
+    "prebuild": "rimraf .parcel-cache dist",
+    "build": "parcel build src/index.html",
+    "clean": "rimraf .parcel-cache dist",
+    "start": "parcel src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "staticFiles": {
-    "staticPath": "webapp/sites/hellwig.org/static",
+    "staticPath": "src/sites/hellwig.org/static",
     "staticOutPath": "static"
   },
   "repository": {
@@ -29,19 +27,17 @@
   "author": "Frank Hellwig",
   "license": "MIT",
   "dependencies": {
-    "@parcel/config-default": "^2.6.0",
-    "@parcel/core": "^2.6.0",
-    "@parcel/css": "^1.9.0",
     "dotenv": "^16.0.1",
-    "express": "^4.18.1",
+    "parcel": "^2.6.1",
     "parcel-reporter-static-files-copy": "^1.3.4",
-    "pkglogger": "^4.2.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-markdown": "^8.0.3",
     "react-router-dom": "^6.3.0",
-    "shutdown-async": "^1.1.0",
-    "styled-components": "^5.3.5",
-    "supports-color": "^9.2.2"
+    "rimraf": "^3.0.2",
+    "styled-components": "^5.3.5"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
   }
 }
