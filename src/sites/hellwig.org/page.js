@@ -36,7 +36,7 @@ const BuildInfo = styled.div`
 `;
 
 function Build() {
-  return <BuildInfo>220618.01</BuildInfo>;
+  return <BuildInfo>220618.02</BuildInfo>;
 }
 
 export function Page() {
