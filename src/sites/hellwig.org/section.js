@@ -117,8 +117,8 @@ export function Section() {
           <div>
             <ul>
               <li>
-                Over ten years experience of deep technical proposal experience
-                with measurable wins of large (&gt; $500M) contracts.
+                Over ten years deep technical proposal experience with
+                measurable wins of large (&gt; $500M) contracts.
               </li>
               <li>
                 Started and grew a technical consulting company supporting CBP,
