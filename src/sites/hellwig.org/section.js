@@ -84,7 +84,9 @@ export function Section() {
         <CardHeader>Important Links</CardHeader>
         <CardBody>
           <p style={{ textAlign: 'center' }}>
-            <a href="./resume-frank-hellwig.pdf">Resume Download Link (PDF)</a>
+            <a href="./static/resume-frank-hellwig.pdf">
+              Resume Download Link (PDF)
+            </a>
           </p>
           <p style={{ textAlign: 'center' }}>
             <a href="https://github.com/fhellwig/publications/blob/master/README.md">
