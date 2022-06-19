@@ -81,10 +81,15 @@ export function Section() {
         </CardBody>
       </Card>
       <Card>
-        <CardHeader>Resume</CardHeader>
+        <CardHeader>Important Links</CardHeader>
         <CardBody>
           <p style={{ textAlign: 'center' }}>
             <a href="./resume-frank-hellwig.pdf">Resume Download Link (PDF)</a>
+          </p>
+          <p style={{ textAlign: 'center' }}>
+            <a href="https://github.com/fhellwig/publications/blob/master/README.md">
+              Publications by Frank Hellwig
+            </a>
           </p>
         </CardBody>
       </Card>
@@ -138,41 +143,6 @@ export function Section() {
         </CardBody>
       </Card>
 
-      <Card>
-        <CardHeader>Publications</CardHeader>
-        <CardBody>
-          <ul>
-            <li>
-              <a href="./cloud-migrations-lessons-learned.pdf">
-                Cloud Migrations - Lessons Learned (ACT-IAC White Paper 2018)
-              </a>
-            </li>
-            <li>
-              <a href="./security-considerations-for-dod-cloud-migrations.pdf">
-                Security Considerations for DoD Cloud Migrations (Buchanan &
-                Edwards White Paper 2017)
-              </a>
-            </li>
-            <li>
-              <a href="./5-reasons-to-move-your-line-of-business-applications-to-the-cloud.pdf">
-                5 Reasons to Move Your Line-of-Business Applications to The
-                Cloud (LinkedIn Article 2016)
-              </a>
-            </li>
-            <li>
-              <a href="./implementing-associations.pdf">
-                Implementing Associations (Dr. Dobb's Journal Article 1998)
-              </a>
-            </li>
-            <li>
-              <a href="./a-secure-sds-software-library.pdf">
-                A Secure SDS Software Library (Eleventh National Computer
-                Security Conference Paper 1988)
-              </a>
-            </li>
-          </ul>
-        </CardBody>
-      </Card>
       <Card>
         <CardHeader>Personal Information</CardHeader>
         <CardBody>
