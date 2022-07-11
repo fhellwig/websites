@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Serve one or more websites",
   "type": "module",
-  "xalias": {
-    "xprocess": false
-  },
   "scripts": {
     "prebuild": "rimraf .parcel-cache dist",
     "build": "parcel build src/index.html",
