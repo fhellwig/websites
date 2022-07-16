@@ -31,12 +31,18 @@ const BuildInfo = styled.div`
   position: absolute;
   bottom: 5px;
   left: 5px;
-  font-size: 0.5em;
+  font-size: 0.75em;
   color: white;
 `;
 
+const TrustLogo = styled.img`
+  position: absolute;
+  bottom: 25px;
+  left: 5px;
+`;
+
 function Build() {
-  return <BuildInfo>220618.02</BuildInfo>;
+  return <BuildInfo>Build: 220715.01</BuildInfo>;
 }
 
 export function Page() {
@@ -64,6 +70,7 @@ export function Page() {
         </Main>
         <Footer />
         <Build />
+        <TrustLogo src="static/positivessl_trust_seal_sm_124x32.png"></TrustLogo>
       </Wrapper>
     </ThemeProvider>
   );
