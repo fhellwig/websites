@@ -19,7 +19,7 @@ export function Main({ onThemeChange }) {
           <Route
             path="/pubs"
             element={
-              <Markdown url="https://raw.githubusercontent.com/fhellwig/publications/master/implementing-associations/article.md" />
+              <Markdown url="https://raw.githubusercontent.com/fhellwig/publications/master/README.md" />
             }
           />
         </Routes>

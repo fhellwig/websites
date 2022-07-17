@@ -88,9 +88,7 @@ export function Section() {
             </a>
           </p>
           <p style={{ textAlign: 'center' }}>
-            <a href="https://github.com/fhellwig/publications/blob/master/README.md">
-              Publications by Frank Hellwig
-            </a>
+            <a href="./pubs">Publications by Frank Hellwig</a>
           </p>
         </CardBody>
       </Card>
