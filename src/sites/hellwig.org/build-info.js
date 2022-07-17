@@ -9,5 +9,5 @@ const Info = styled.div`
 `;
 
 export function BuildInfo() {
-  return <Info>Build: 220717.01</Info>;
+  return <Info>Build: 220717.02</Info>;
 }

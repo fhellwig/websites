@@ -85,9 +85,11 @@ export function Markdown() {
       <p>
         <a href="/">Back to Main Page</a>
       </p>
-      <p>
-        <a href="./pubs">Back to Publications</a>
-      </p>
+      {doc !== DEFAULT && (
+        <p>
+          <a href="./pubs">Back to Publications</a>
+        </p>
+      )}
       <ReactMarkdown
         transformLinkUri={transformLinkUri}
         transformImageUri={transformImageUri}
