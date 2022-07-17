@@ -1,7 +1,7 @@
-import { Page as Hellwig } from './sites/hellwig.org/page.js';
-import { Page as Odalco } from './sites/odalco.com/page.js';
+import { App as Hellwig } from './sites/hellwig.org/app.js';
+import { App as Odalco } from './sites/odalco.com/app.js';
 
-export function getPage() {
+export function getApp() {
   switch (window.location.hostname) {
     case 'www.hellwig.org':
     case 'hellwig.org':

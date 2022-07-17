@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { DARK, LIGHT } from './themes.js';
+import { DARK, getTheme, LIGHT } from './themes.js';
+
+const THEME_NAME = 'theme-name'; // local storage key
 
 const Section = styled.section`
   margin: 20px 0 0 20px;
@@ -13,18 +15,17 @@ const Label = styled.label`
 `;
 
 export function ThemeToggle({ onThemeChange }) {
-  const [theme, setTheme] = useState(
-    localStorage.getItem('theme') || 'default'
+  const [themeName, setThemeName] = useState(
+    localStorage.getItem(THEME_NAME) || 'default'
   );
 
   useEffect(() => {
-    localStorage.setItem('theme', theme);
-    onThemeChange(theme);
-  }, [theme]);
+    localStorage.setItem(THEME_NAME, themeName);
+    onThemeChange(getTheme(themeName));
+  }, [themeName]);
 
   function onChange(ev) {
-    const newValue = theme === DARK ? LIGHT : DARK;
-    setTheme(newValue);
+    setThemeName(themeName === DARK ? LIGHT : DARK); // invert theme
   }
 
   return (
@@ -34,7 +35,7 @@ export function ThemeToggle({ onThemeChange }) {
           type="checkbox"
           name="theme"
           value="theme"
-          checked={theme === DARK}
+          checked={themeName === DARK}
           onChange={onChange}
         />
         &nbsp;Dark&nbsp;Theme
