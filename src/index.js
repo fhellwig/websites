@@ -1,6 +1,8 @@
 import { createRoot } from 'react-dom/client';
 import { getApp } from './app-selector.js';
 import './styles.css';
+import './uikit/js/uikit-icons.min.js';
+import './uikit/js/uikit.min.js';
 
 const container = document.getElementById('app');
 const root = createRoot(container);
