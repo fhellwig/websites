@@ -12,7 +12,8 @@ function transformImageUri(src) {
 function transformLinkUri(path) {
   if (path.endsWith('.md')) {
     const doc = path.substring(path.lastIndexOf('/') + 1);
-    return './pubs?doc=' + doc;
+    const nocache = new Date().getTime();
+    return `./pubs?doc=${doc}?nocache=${nocache}`;
   } else if (path.startsWith('http')) {
     return path;
   } else {

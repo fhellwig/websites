@@ -18,7 +18,7 @@ export function Footer() {
         <p>
           <img src={trust} />
         </p>
-        <p>Build: 220723.01</p>
+        <p>Build: 220723.02</p>
       </Content>
     </StyledFooter>
   );
