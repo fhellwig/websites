@@ -5,18 +5,18 @@
   "type": "module",
   "scripts": {
     "prebuild": "rimraf .parcel-cache dist",
-    "build": "parcel build src/index.html",
+    "build": "parcel build public/index.html",
     "clean": "rimraf .parcel-cache dist",
-    "start": "parcel src/index.html",
+    "start": "parcel public/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "staticFiles": {
-    "staticPath": "src/sites/hellwig.org/static",
+    "staticPath": "static",
     "staticOutPath": "static"
   },
   "repository": {
     "type": "git",
-    "url": "https://fhellwig@dev.azure.com/fhellwig/hellwig.org/_git/hellwig.org"
+    "url": "https://github.com/fhellwig/hellwig.org.git"
   },
   "keywords": [
     "website"
