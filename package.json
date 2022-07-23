@@ -24,6 +24,7 @@
   "author": "Frank Hellwig",
   "license": "MIT",
   "dependencies": {
+    "bulma": "^0.9.4",
     "parcel": "^2.6.2",
     "parcel-reporter-static-files-copy": "^1.3.4",
     "react": "^18.2.0",

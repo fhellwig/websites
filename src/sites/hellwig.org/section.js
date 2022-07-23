@@ -1,48 +1,13 @@
 import styled from 'styled-components';
+import { Content, Table } from './bulma.js';
 import { Card, CardBody, CardHeader } from './card.js';
 
-const Table = styled.table`
-  caption {
-    border-bottom: solid 1px;
-    font-weight: 500;
-    font-size: 1.1em;
-    padding-bottom: 2px;
-  }
-  thead {
-    th {
-      text-align: left;
-    }
-  }
-  tbody {
-    th {
-      font-weight: 500;
-      text-align: left;
-    }
-    td,
-    th {
-      padding-right: 1em;
-    }
-  }
-`;
-
-const StyledSection = styled.section`
+const StyledSection = styled.article`
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   gap: 20px;
   padding: 20px;
-  ul {
-    margin: 0;
-    margin-block: 0;
-    padding-left: 16px;
-    li {
-      padding-left: 8px;
-    }
-  }
-  p {
-    margin-top: 0;
-    margin-bottom: 16px;
-  }
 `;
 
 export function Section() {
@@ -82,14 +47,16 @@ export function Section() {
       <Card>
         <CardHeader>Important Links</CardHeader>
         <CardBody>
-          <p style={{ textAlign: 'center' }}>
-            <a href="./static/resume-frank-hellwig.pdf">
-              Resume Download Link (PDF)
-            </a>
-          </p>
-          <p style={{ textAlign: 'center' }}>
-            <a href="./pubs">Publications by Frank Hellwig</a>
-          </p>
+          <Content>
+            <p style={{ textAlign: 'center' }}>
+              <a href="./static/resume-frank-hellwig.pdf">
+                Resume Download Link (PDF)
+              </a>
+            </p>
+            <p style={{ textAlign: 'center' }}>
+              <a href="./pubs">Publications by Frank Hellwig</a>
+            </p>
+          </Content>
         </CardBody>
       </Card>
       <Card>
@@ -118,7 +85,7 @@ export function Section() {
       <Card>
         <CardHeader>Career Summary</CardHeader>
         <CardBody>
-          <div>
+          <Content>
             <ul>
               <li>
                 Over ten years deep technical proposal experience with
@@ -132,25 +99,27 @@ export function Section() {
                 Architect for the U-2R reconnaissance mission planning system
               </li>
               <li>
-                Supported the U.S. Intelligence Communities for almost 20 years
+                Supported the U.S. Intelligence Community for almost 20 years
               </li>
               <li>
                 U.S. Army Captain supporting the Strategic Defense Initiative
               </li>
             </ul>
-          </div>
+          </Content>
         </CardBody>
       </Card>
 
       <Card>
         <CardHeader>Personal Information</CardHeader>
         <CardBody>
-          <p>
-            I am a commercial, instrument-rated pilot with over 1,500 hours. I
-            own a Cirrus SR20 that I keep at KHEF. In my spare time, I enjoy
-            flying with my wonderful wife, riding my motorcycle, collecting
-            watches, and building various AR-platform rifles.
-          </p>
+          <Content>
+            <p>
+              I am a commercial, instrument-rated pilot with over 1,500 hours. I
+              own a Cirrus SR20 that I keep at KHEF. In my spare time, I enjoy
+              flying with my wonderful wife, riding my motorcycle, collecting
+              watches, and building various AR-platform rifles.
+            </p>
+          </Content>
         </CardBody>
       </Card>
     </StyledSection>

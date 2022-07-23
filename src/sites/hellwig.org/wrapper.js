@@ -1,17 +1,10 @@
 import styled from 'styled-components';
+import { Section } from './bulma.js';
 
-const AppWrapper = styled.div`
+const AppWrapper = styled(Section)`
   display: flex;
   flex-flow: column nowrap;
   height: 100%;
-  font-family: Roboto, sans-serif;
-  background-image: url('static/background.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  a {
-    color: ${(p) => p.theme.hrefcolor};
-  }
 `;
 
 export function Wrapper({ children }) {
