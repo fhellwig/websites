@@ -1,8 +1,6 @@
 import styled from 'styled-components';
-import { Content, Table } from './bulma.js';
-import { Card, CardBody, CardHeader } from './card.js';
 
-const StyledSection = styled.article`
+const StyledSection = styled.section`
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -10,13 +8,17 @@ const StyledSection = styled.article`
   padding: 20px;
 `;
 
+export const Panel = styled.div.attrs({ className: 'panel' })`
+  flex: 1 400px;
+`;
+
 export function Section() {
   return (
     <StyledSection>
-      <Card>
-        <CardHeader>Current Employment</CardHeader>
-        <CardBody>
-          <Table>
+      <Panel>
+        <div className="panel-heading">Current Employment</div>
+        <div className="panel-block">
+          <table className="table">
             <tbody>
               <tr>
                 <th>Company</th>
@@ -31,23 +33,23 @@ export function Section() {
                 <td>Northern Virginia</td>
               </tr>
             </tbody>
-          </Table>
-        </CardBody>
-      </Card>
-      <Card>
-        <CardHeader>Recent Highlights</CardHeader>
-        <CardBody>
+          </table>
+        </div>
+      </Panel>
+      <Panel>
+        <div className="panel-heading">Recent Highlights</div>
+        <div className="panel-block">
           <p>
             Over the past year, I have been the principal SA on bids totaling
             $1.6B TCV of single-award, prime contracts with U.S. Federal
             Departments and Agencies.
           </p>
-        </CardBody>
-      </Card>
-      <Card>
-        <CardHeader>Important Links</CardHeader>
-        <CardBody>
-          <Content>
+        </div>
+      </Panel>
+      <Panel>
+        <div className="panel-heading">Important Links go here</div>
+        <div className="panel-block">
+          <div className="content">
             <p style={{ textAlign: 'center' }}>
               <a href="./static/resume-frank-hellwig.pdf">
                 Resume Download Link (PDF)
@@ -56,13 +58,13 @@ export function Section() {
             <p style={{ textAlign: 'center' }}>
               <a href="./pubs">Publications by Frank Hellwig</a>
             </p>
-          </Content>
-        </CardBody>
-      </Card>
-      <Card>
-        <CardHeader>Education</CardHeader>
-        <CardBody>
-          <Table>
+          </div>
+        </div>
+      </Panel>
+      <Panel>
+        <div className="panel-heading">Education</div>
+        <div className="content">
+          <table className="table">
             <thead>
               <tr>
                 <th>School</th>
@@ -79,13 +81,13 @@ export function Section() {
                 <td>Bachelor of Science in Electrical Engineering</td>
               </tr>
             </tbody>
-          </Table>
-        </CardBody>
-      </Card>
-      <Card>
-        <CardHeader>Career Summary</CardHeader>
-        <CardBody>
-          <Content>
+          </table>
+        </div>
+      </Panel>
+      <Panel>
+        <div className="panel-heading">Career Summary</div>
+        <div className="panel-block">
+          <div className="content">
             <ul>
               <li>
                 Over ten years deep technical proposal experience with
@@ -105,23 +107,23 @@ export function Section() {
                 U.S. Army Captain supporting the Strategic Defense Initiative
               </li>
             </ul>
-          </Content>
-        </CardBody>
-      </Card>
+          </div>
+        </div>
+      </Panel>
 
-      <Card>
-        <CardHeader>Personal Information</CardHeader>
-        <CardBody>
-          <Content>
+      <Panel>
+        <div className="panel-heading">Personal Information</div>
+        <div className="panel-block">
+          <div className="content">
             <p>
               I am a commercial, instrument-rated pilot with over 1,500 hours. I
               own a Cirrus SR20 that I keep at KHEF. In my spare time, I enjoy
               flying with my wonderful wife, riding my motorcycle, collecting
               watches, and building various AR-platform rifles.
             </p>
-          </Content>
-        </CardBody>
-      </Card>
+          </div>
+        </div>
+      </Panel>
     </StyledSection>
   );
 }

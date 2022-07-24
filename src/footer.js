@@ -25,7 +25,7 @@ export function Footer() {
       <Content>
         <FooterPara>
           Please contact me via <a href="tel:5712076308">phone</a> or{' '}
-          <a href="mailto:frank@hellwig.org">email</a> (Build: 220723.02)
+          <a href="mailto:frank@hellwig.org">email</a> (Build: 220723.03)
           <FooterImg src={trust} />
         </FooterPara>
       </Content>
